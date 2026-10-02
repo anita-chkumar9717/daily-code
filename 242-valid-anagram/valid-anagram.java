@@ -4,20 +4,20 @@ class Solution {
             return false;
         }
 
-        int[] counts = new int[26];
+        int[] count = new int[26];
 
-        for(int i=0; i<s.length(); i++){
-            counts[s.charAt(i) -'a']+=1;
-            counts[t.charAt(i) -'a']-=1;
+        for (char c : s.toCharArray()) {
+            count[c - 'a']++;
         }
-        
-        for(int i=0; i<26; i++){
-            if(counts[i]!=0 ){
-                return false;
-            }
+
+        for (char c : t.toCharArray()) {
+            count[c - 'a']--;
+        }
+
+        for (int x : count) {
+            if (x != 0) return false;
         }
         return true;
-        
     }
     
 }
