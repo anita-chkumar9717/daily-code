@@ -4,33 +4,20 @@ class Solution {
             return false;
         }
 
-        HashMap<Character, Integer> hm = new HashMap<>();
+        int[] counts = new int[26];
 
-        for(int i=0; i< s.length(); i++){
+        for(int i=0; i<s.length(); i++){
             char c = s.charAt(i);
+            char d = t.charAt(i);
 
-            if(hm.containsKey(c)){
-                hm.put(c, hm.get(c)+1);
-            }else{
-                hm.put(c,1);
+            if(c>='a' && c<='z'){
+                counts[c-'a']+=1;
+                counts[d-'a']-=1;
             }
-
         }
-
-        for(int i=0; i< t.length(); i++){
-            char c = t.charAt(i);
-
-            if(hm.containsKey(c)){
-                hm.put(c, hm.get(c)-1);
-            }else{
-                return false;
-            }
-
-        }
-
-        for (char key : hm.keySet()) {
-            int value = hm.get(key);
-            if(value>0){
+        
+        for(int i=0; i<26; i++){
+            if(counts[i]!=0 ){
                 return false;
             }
         }
