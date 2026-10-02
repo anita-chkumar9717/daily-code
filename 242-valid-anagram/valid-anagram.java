@@ -7,13 +7,8 @@ class Solution {
         int[] counts = new int[26];
 
         for(int i=0; i<s.length(); i++){
-            char c = s.charAt(i);
-            char d = t.charAt(i);
-
-            if(c>='a' && c<='z'){
-                counts[c-'a']+=1;
-                counts[d-'a']-=1;
-            }
+            counts[s.charAt(i) -'a']+=1;
+            counts[t.charAt(i) -'a']-=1;
         }
         
         for(int i=0; i<26; i++){
