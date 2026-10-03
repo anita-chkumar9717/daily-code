@@ -13,11 +13,9 @@ class Solution {
                 if(!strs[k].startsWith(temp)){
                     return r;
                 }
-                System.out.println("temp:" + temp);
             }
             r=temp;
             j+=1;
-            System.out.println(r);
         }
         return r;
     }
