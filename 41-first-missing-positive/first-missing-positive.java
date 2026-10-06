@@ -9,7 +9,7 @@ class Solution {
                 break;
             }
         }
-
+        // Loop
         if(nums[indx+1]==1){
             for(int i=indx+1; i<nums.length-1; i++){
                 if(nums[i+1]>nums[i]+1){
