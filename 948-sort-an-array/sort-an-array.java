@@ -47,5 +47,6 @@ class Solution {
             j++;
             k++;
         }
+        // end of the merge method
     }
 }
