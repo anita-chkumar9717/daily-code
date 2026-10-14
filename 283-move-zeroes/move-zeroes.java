@@ -10,7 +10,7 @@ class Solution {
                 nums[left] = temp;
                 left++;
             }
-        }     
+        }   // end of for loop  
         
     }
 }
