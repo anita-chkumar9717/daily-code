@@ -1,6 +1,6 @@
 class Solution {
     public String reverseWords(String s) {
-        // solution
+        // solution using two pointer
         int l=0;
         int r=0;
         char[] a= s.toCharArray();
@@ -12,7 +12,7 @@ class Solution {
             }
             r+=1;
         }
-        // reverse the last word of the string provided.
+        
         rev(a,l,r-1);
         return new String(a);
     }
