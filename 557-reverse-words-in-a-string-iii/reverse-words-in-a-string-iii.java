@@ -12,7 +12,7 @@ class Solution {
             }
             r+=1;
         }
-        // reverse the last word
+        // reverse the last word of the string provided.
         rev(a,l,r-1);
         return new String(a);
     }
