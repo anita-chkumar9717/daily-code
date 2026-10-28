@@ -1,5 +1,6 @@
 class Solution {
     public int countBinarySubstrings(String s) {
+        // Solution using 2 poiinter 
         int res=0; 
         int prev=0;
         int strk=1;
